@@ -43,7 +43,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
-  gem 'simple_form'
 end
 
 group :development, :test do
@@ -54,3 +53,8 @@ end
 
 gem 'pry'
 gem 'hirb'
+gem 'simple_form'
+
+group :production do
+  gem 'rails_12factor'
+end
