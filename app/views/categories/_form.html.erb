@@ -1,0 +1,10 @@
+<%= simple_form_for(@category) do |f| %>
+  <%= f.error_notification %>
+  <div class="field">
+    <%= f.input :name %>
+  </div>
+  <div class="field">
+    <%= f.association :parent %>
+  </div>
+  <%= f.submit %>
+<% end %>

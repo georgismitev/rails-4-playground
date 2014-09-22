@@ -1,0 +1,15 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+  <div class="field">
+    <%= f.input :name %>
+  </div>
+  <div class="field">
+    <%= f.input :price %>
+  </div>
+  <div class="field">
+    <%= f.simple_fields_for :product_categories do |ff| %>
+      <%= ff.association :category %>
+    <% end %>
+  </div>
+  <%= f.submit %>
+<% end %>
