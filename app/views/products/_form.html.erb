@@ -7,9 +7,12 @@
     <%= f.input :price %>
   </div>
   <div class="field">
-    <%= f.simple_fields_for :product_categories do |ff| %>
-      <%= ff.association :category %>
+    <%= f.simple_fields_for :product_categories do |product_category| %>
+      <%= render 'product_category_fields', :f => product_category %>
     <% end %>
+    <div class="field">
+      <%= link_to_add_association 'Add category', f, :product_categories %>
+    </div>
   </div>
   <%= f.submit :class => 'btn btn-warning btn-submit' %>
 <% end %>
