@@ -5,3 +5,4 @@ README
 2. many to many relationship
 3. `simple_form`
 4. `rspec` with `spring` and `factory_girl`
+5. dynamic nested forms with `cocoon`, adds "Add" and "Remove" button

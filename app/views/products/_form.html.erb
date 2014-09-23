@@ -1,17 +1,13 @@
 <%= simple_form_for(@product) do |f| %>
-  <%= f.error_notification %>
-  <div class="field">
+  <div class="form-group">
+    <%= f.error_notification %>
     <%= f.input :name %>
-  </div>
-  <div class="field">
     <%= f.input :price %>
-  </div>
-  <div class="field">
     <%= f.simple_fields_for :product_categories do |product_category| %>
       <%= render 'product_category_fields', :f => product_category %>
     <% end %>
-    <div class="field">
-      <%= link_to_add_association 'Add category', f, :product_categories %>
+    <div class="wrapper-add-category">
+      <%= link_to_add_association 'Add category', f, :product_categories, :class => 'btn btn-success btn-xs' %>
     </div>
   </div>
   <%= f.submit :class => 'btn btn-warning btn-submit' %>
