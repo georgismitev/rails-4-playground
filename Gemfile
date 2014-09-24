@@ -56,10 +56,10 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'newrelic_rpm'
 end
 
 gem 'pry'
 gem 'hirb'
 gem 'simple_form'
-gem 'newrelic_rpm'
 gem "cocoon"
