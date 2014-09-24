@@ -62,4 +62,5 @@ end
 gem 'pry'
 gem 'hirb'
 gem 'simple_form'
-gem "cocoon"
+gem 'cocoon'
+gem 'active_model_serializers'
